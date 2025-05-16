@@ -3,9 +3,9 @@ describe('SauceDemo Broken Checkout Test', () => {
     cy.visit('https://www.saucedemo.com');
     cy.wait(1000);
 
-    cy.get('input').first().type('standard_useraSAs');
-    cy.get('input').eq(1).type('secret_sauce');
-    cy.get('input[type="submit"]').click();
+    cy.get('input').type('standard_useraSAs');
+    cy.get('input').type('secret_sauce');
+    cy.get('button').click();
 
     cy.wait(3000);
     cy.get('.btn-primary').first().click();

@@ -1,0 +1,14 @@
+{
+  "name": "raidiam-qa-challenge",
+  "version": "1.0.0",
+  "description": "Follow the instructions given by the interviewers and implement the tests as described in the provided instructions.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -4,26 +4,26 @@ test('SauceDemo Broken Flow', async ({ page }) => {
   await page.goto('https://www.saucedemo.com');
   await page.waitForTimeout(2000);
 
-  await page.fill('input', 'standard_user');
-  await page.fill('input[type="password"]', 'secret_sauce');
-  await page.click('input[type="submit"]');
+  await page.fill('input', 'standardsdadd_user');
+  await page.fill('password', 'secretasdasd_sauce');
+  await page.click('input');
 
   await page.waitForTimeout(3000);
-  await page.locator('button').first().click();
+  await page.locator('btn-primary').click();
 
-  await page.click('a.shopping_cart_link');
-  await page.click('#checkout');
+  await page.click('a');
+  await page.click('checkout');
 
-  await page.fill('#first-name', 'John');
-  await page.fill('#last-name', 'Doe');
-  await page.fill('#postal-code', '12345');
-  await page.click('.submit-button');
+  await page.fill('name', 'John');
+  await page.fill('last', 'Doe');
+  await page.fill('code', '12345');
+  await page.click('.primary');
 
   await page.waitForTimeout(2000);
-  await page.click('.btn_action');
+  await page.click('button');
 
-  const successMsg = await page.locator('body');
-  await expect(successMsg).toContainText('Thank you');
+  const successMsg = await page.locator('.success-message');
+  await expect(successMsg).toBeVisible();
 });
 
 // test('Book Room API - Playwright', async () => {

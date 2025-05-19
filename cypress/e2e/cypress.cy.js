@@ -24,15 +24,38 @@ describe('SauceDemo Broken Checkout Test', () => {
   });
 });
 
-// describe('Book Room - Cypress (Bad)', () => {
-//   it('books room with poor practices', () => {
-//     cy.request('GET', 'https://automationintesting.online/booking').then((res) => {
-//       cy.wait(2000);
-//     });
+// describe('E-commerce API Flow', () => {
+//   it('performs login, adds product to cart, and gets cart', () => {
+//     const email = "testuser@testuser.com";
+//     const password = "vZGvX79j43JGK#@";
 
-//     cy.request('POST', 'https://automationintesting.online/booking', {}
-//       ).then((bookRes) => {
-//         console.log(bookRes.body);
+//     cy.request({
+//       method: 'POST',
+//       url: 'https://rahulshettyacademy.com/api/ecom/auth/login',
+//       headers: { 'Content-Type': 'application/json' },
+//       body: {
+//         email,
+//         password
+//       }
+//     }).then((resp) => {
+
+//       cy.request({
+//         method: 'POST',
+//         url: 'https://rahulshettyacademy.com/api/ecom/user/',
+//         headers: { 'Content-Type': 'application/json' },
+//         body: {
+//           prodId: 'abc123',
+//           qty: 1
+//         }
+//       }).then((resp2) => {
+
+//         cy.request({
+//           method: 'GET',
+//           url: 'https://rahulshettyacademy.com/api/ecom/user'
+//           // No headers
+//         }).then((resp3) => {
+//         });
 //       });
+//     });
 //   });
 // });

@@ -1,12 +1,34 @@
 const axios = require('axios');
 
-async function bookRoom() {
-  const res = await axios.get('https://automationintesting.online/booking');
+async function main() {
+  const email = "testuser@testuser.com";
+  const password = "vZGvX79j43JGK#@";
 
-  await axios.post('https://automationintesting.online/booking', {
-  });
+  const loginPayload = {
+    email: email,
+    password: password,
+  };
 
-  console.log('No assertion or error handling');
+  const resp = await axios.post(
+    "https://rahulshettyacademy.com/api/ecom/auth/login",
+    loginPayload,
+    { headers: { "Content-Type": "application/json" } }
+  );
+
+  const cartPayload = {
+    prodId: "abc123",
+    qty: 1,
+  };
+
+  const resp2 = await axios.post(
+    "https://rahulshettyacademy.com/api/ecom/user/",
+    cartPayload,
+    { headers: { "Content-Type": "application/json" } }
+  );
+
+  const resp3 = await axios.get(
+    "https://rahulshettyacademy.com/api/ecom/user"
+  );
 }
 
-bookRoom();
+main();

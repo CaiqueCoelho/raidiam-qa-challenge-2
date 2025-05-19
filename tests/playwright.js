@@ -26,14 +26,25 @@ test('SauceDemo Broken Flow', async ({ page }) => {
   await expect(successMsg).toBeVisible();
 });
 
-// test('Book Room API - Playwright', async () => {
-//   const context = await request.newContext();
-//   const res = await context.get('https://automationintesting.online/booking');
+// test('E-commerce API Flow', async ({ request }) => {
+//   const email = "testuser@testuser.com";
+//   const password = "vZGvX79j43JGK#@";
 
-//   await new Promise(r => setTimeout(r, 2000));
-
-//   await context.post('https://automationintesting.online/booking', {
+//   const resp = await request.post('https://rahulshettyacademy.com/api/ecom/auth/login', {
+//     headers: { 'Content-Type': 'application/json' },
 //     data: {
-//       }
+//       email,
+//       password
+//     }
 //   });
+
+//   const resp2 = await request.post('https://rahulshettyacademy.com/api/ecom/user/', {
+//     headers: { 'Content-Type': 'application/json' },
+//     data: {
+//       prodId: 'abc123',
+//       qty: 1
+//     }
+//   });
+
+//   const resp3 = await request.get('https://rahulshettyacademy.com/api/ecom/user');
 // });
